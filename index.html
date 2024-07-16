@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="simple two player game" />
+
+    <!-- TITLE  -->
+    <title>Game</title>
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+  </head>
+  <body>
+    <!-- LEFT SECTION -->
+    <section class="section-left current-turn">
+      <h3 class="turn-message">
+        <span class="dot"></span>
+        Current Turn
+      </h3>
+      <h1 class="player">Player 1</h1>
+      <span>Current Turn score</span>
+      <span class="score-temp">0</span>
+      <div class="current-score-div">
+        <span class="current-score-text"> Final score</span>
+        <span class="current-score"> 0 </span>
+      </div>
+    </section>
+
+    <!-- MIDDLE SECTION -->
+    <section class="section-middle">
+      <button type="button" class="btn button-new-game">New Game</button>
+      <div class="dice">
+        <img
+          src="/images/dice1.svg"
+          class="dice-img hidden"
+          alt="dice with 1 on it"
+        />
+      </div>
+      <button type="button" class="btn button-roll-dice">Roll Dice</button>
+      <button type="button" class="btn button-hold">Hold</button>
+    </section>
+
+    <!-- RIGHT SECTION -->
+    <section class="section-right">
+      <h3 class="turn-message">
+        <span class="dot"></span>
+        Current Turn
+      </h3>
+      <h1 class="player">Player 2</h1>
+      <span>Current Turn score</span>
+      <span class="score-temp">0</span>
+      <div class="current-score-div">
+        <span class="current-score-text"> Final score </span>
+        <span class="current-score"> 0 </span>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
