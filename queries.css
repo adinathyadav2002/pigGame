@@ -10,6 +10,10 @@
     .btn{
         width: 100%;
     }
+
+    .rules{
+        padding: 3rem 5rem;
+    }
 }
 
 @media(max-width:44em){
@@ -24,7 +28,7 @@
 
 @media(max-width:35em){
     html{
-        font-size: 52%;
+        font-size: 50%;
     }
 
     .section-right{
@@ -53,7 +57,7 @@
         gap: 1rem;
     }
 
-    .section-middle .btn:nth-child(1){
+    .section-middle .btn:nth-child(2){
         margin: 0;
     }
 
@@ -61,6 +65,8 @@
         padding: 2rem 0;
     }
 }
+
+
 
 @media(max-width:24em){
 
@@ -76,4 +82,8 @@
     /* body section{
         height: 90vh;
     } */
+
+    .rules{
+        padding: 1rem 3rem;
+    }
 }

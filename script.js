@@ -10,6 +10,10 @@ const current_score_left = document.getElementsByClassName("current-score")[0];
 const current_score_right = document.getElementsByClassName("current-score")[1];
 const new_game = document.querySelector(".button-new-game");
 const dice_img = document.querySelector(".dice-img");
+const button_rules = document.querySelector(".button-rules");
+const button_close = document.querySelector(".close-btn");
+const rules = document.querySelector(".rules");
+const overlay = document.querySelector(".overlay");
 
 // function to rotate the turn
 const rotate_turn = function () {
@@ -37,6 +41,30 @@ const add_to_right_score= function(){
   current_score_right.textContent = Number(current_score_right.textContent)+ Number(score_temp_right.textContent)
   score_temp_right.textContent = 0;
 };
+
+
+// erase all the data and if current player is 2 then make it 1
+const erase_all = function(){
+  current_score_left.textContent = 0;
+  current_score_right.textContent = 0;
+  score_temp_left.textContent = 0;
+  score_temp_right.textContent = 0;
+  section_right.classList.remove("current-turn");
+  section_left.classList.add("current-turn");
+};
+
+
+// to show the rules 
+button_rules.addEventListener("click", function(){
+  overlay.classList.remove("hidden-none");
+  rules.classList.remove("hidden-none");
+})
+
+// to close the modal
+button_close.addEventListener('click', function(){
+  overlay.classList.add('hidden-none');
+  rules.classList.add('hidden-none');
+})
 
 
 // event to roll the dice on clicking the roll button
@@ -67,3 +95,5 @@ button_roll.addEventListener('click',function(){
 
 // event that will rotate turn on clicking the hold button
 button_hold.addEventListener('click', rotate_turn)
+
+new_game.addEventListener('click', erase_all)
